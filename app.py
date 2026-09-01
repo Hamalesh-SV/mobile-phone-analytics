@@ -4,10 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-
-# =========================================================
 # PAGE CONFIGURATION
-# =========================================================
 
 st.set_page_config(
     page_title="Mobile Phone Analytics",
@@ -15,9 +12,7 @@ st.set_page_config(
 )
 
 
-# =========================================================
 # CUSTOM CSS
-# =========================================================
 
 st.markdown("""
 <style>
@@ -40,9 +35,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# =========================================================
 # LOAD DATA
-# =========================================================
 
 @st.cache_data
 def load_data():
@@ -51,10 +44,7 @@ def load_data():
 
 df = load_data()
 
-
-# =========================================================
 # TITLE
-# =========================================================
 
 st.markdown(
     '<div class="main-title">Mobile Phone Analytics Dashboard</div>',
@@ -68,10 +58,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-# =========================================================
 # SIDEBAR FILTERS
-# =========================================================
 
 st.sidebar.title("Filters")
 
@@ -129,10 +116,7 @@ st.sidebar.info(
     "Use the filters to dynamically explore the dataset."
 )
 
-
-# =========================================================
 # APPLY FILTERS
-# =========================================================
 
 filtered_df = df[
     (df["Brand"].isin(brands)) &
@@ -141,10 +125,7 @@ filtered_df = df[
     (df["Storage"].isin(storage))
 ]
 
-
-# =========================================================
 # DASHBOARD METRICS
-# =========================================================
 
 if len(filtered_df) > 0:
 
@@ -190,10 +171,7 @@ else:
         "No phones match the selected filters."
     )
 
-
-# =========================================================
 # TABS
-# =========================================================
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "Overview",
@@ -204,10 +182,7 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "Insights"
 ])
 
-
-# =========================================================
 # TAB 1 - OVERVIEW
-# =========================================================
 
 with tab1:
 
@@ -249,10 +224,7 @@ with tab1:
 
         st.info("No data available.")
 
-
-# =========================================================
 # TAB 2 - BRAND ANALYSIS
-# =========================================================
 
 with tab2:
 
@@ -363,10 +335,7 @@ with tab2:
             "No data available for brand analysis."
         )
 
-
-# =========================================================
 # TAB 3 - PRICING ANALYSIS
-# =========================================================
 
 with tab3:
 
@@ -491,10 +460,7 @@ with tab3:
             "No data available for price analysis."
         )
 
-
-# =========================================================
 # TAB 4 - SPECIFICATIONS
-# =========================================================
 
 with tab4:
 
@@ -669,10 +635,7 @@ with tab4:
             "No data available for specifications analysis."
         )
 
-
-# =========================================================
 # TAB 5 - RATINGS
-# =========================================================
 
 with tab5:
 
@@ -849,10 +812,7 @@ with tab5:
             "No data available for rating analysis."
         )
 
-
-# =========================================================
 # TAB 6 - INSIGHTS
-# =========================================================
 
 with tab6:
 
@@ -962,7 +922,7 @@ with tab6:
                 f"(₹{most_expensive_phone['Price']:,.0f})"
             )
 
-
+        
         # Correlation heatmap
 
         st.subheader("Feature Correlation")
@@ -1035,10 +995,7 @@ with tab6:
             "Select different filters to generate insights."
         )
 
-
-# =========================================================
 # FOOTER
-# =========================================================
 
 st.divider()
 
