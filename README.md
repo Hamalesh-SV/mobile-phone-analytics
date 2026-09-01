@@ -54,7 +54,7 @@ Mobile_Phone_Analytics/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mobile-phone-analytics.git
+git clone https://github.com/Hamalesh-SV/mobile-phone-analytics.git
 ```
 
 ### 2. Open the project folder
