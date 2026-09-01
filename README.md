@@ -39,6 +39,7 @@ The project provides an interactive Streamlit dashboard where users can filter t
 
 ## Project Structure
 
+```text
 Mobile_Phone_Analytics/
 │
 ├── app.py
@@ -46,13 +47,14 @@ Mobile_Phone_Analytics/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
 
 ## How to Run
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Hamalesh-SV/mobile-phone-analytics.git
+git clone https://github.com/YOUR_USERNAME/mobile-phone-analytics.git
 ```
 
 ### 2. Open the project folder
@@ -72,6 +74,7 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+
 The dashboard will open in your browser.
 
 ## Analysis Performed
@@ -143,5 +146,5 @@ Through this project, I practiced:
 
 ## Author
 
-Hamalesh
+Hamalesh sv
 GitHub: https://github.com/Hamalesh-SV
